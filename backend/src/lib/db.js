@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log("mongo db connected successfully");
+    await mongoose.connect("mongodb+srv://abhijeetkadam656:PDWgCGvUYYbaNCfe@cluster0.fvlth.mongodb.net/chat_DB?retryWrites=true&w=majority&appName=Cluster0");
+    console.log("Mongo db connected successfully");
   } catch (error) {
-    console.log("mongo db error detected:");
+    console.log("mongo db error detected:", error);
   }
 };
